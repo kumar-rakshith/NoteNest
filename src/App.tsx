@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { NewNote } from "./NewNote";
 import { useLocalStorage } from "./useLocalStorage";
 import { useMemo } from "react";
+import { v4 as uuidV4 } from "uuid";
 
 export type Note = {
   id: String;
@@ -31,6 +32,7 @@ export type Tag = {
   label: String;
 };
 
+
 function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", [])
   const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", [])
@@ -49,8 +51,6 @@ function App() {
       ]
     })
   }
-
-  
   return (
     <Container className="my-4">
       <Routes>
