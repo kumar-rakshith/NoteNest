@@ -7,7 +7,6 @@ import { useMemo } from "react";
 import { v4 as uuidV4 } from "uuid";
 
 
-
 export type Note = {
   id: String;
 } & NoteData;
