@@ -5,7 +5,6 @@ export function NewNote(){
         <>
         <h1>New From</h1>
         <NoteFrom/>
-        
         </>
     )
 }
